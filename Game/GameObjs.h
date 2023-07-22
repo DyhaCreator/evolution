@@ -1,0 +1,5 @@
+class GameObjs{
+public:
+    
+    GameObjs(){}
+};

@@ -21,7 +21,9 @@ public:
     }
     void render(){
         this->window.clear(sf::Color(150, 150, 150));
+
         
+
         this->window.display();
     }
 };
