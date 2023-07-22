@@ -1,13 +1,13 @@
 class Graph{
 public:
     bool isOpen = true;
+    Params params = Params();
     const int Width = 1080;
     const int Height = 720;
-    const int FRAMERATE = 10000;
     sf::Event ev;
-    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(1080,720), "Evolution");
+    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(params.Width, params.Height), "Evolution");
     Graph(){
-        this->window.setFramerateLimit(FRAMERATE);
+        this->window.setFramerateLimit(params.FRAMERATE);
     }
     void update(){
         this->isOpen = this->window.isOpen();
