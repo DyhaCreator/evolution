@@ -14,6 +14,7 @@ int main(){
     Graph gr = Graph();
     Game game = Game();
     while(gr.isOpen){
+        game.update(sf::Mouse::getPosition(gr.window).x, sf::Mouse::getPosition(gr.window).y);
         game.gameObjs.createNewFood();
         gr.update();
         gr.render(game);
