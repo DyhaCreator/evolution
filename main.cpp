@@ -3,6 +3,7 @@
 #include <vector>
 #include "params.h"
 #include "microlibs/random.h"
+#include "Game/Camera.h"
 #include "Game/Food.h"
 #include "Game/Players.h"
 #include "Game/GameObjs.h"
@@ -13,8 +14,9 @@ int main(){
     Graph gr = Graph();
     Game game = Game();
     while(gr.isOpen){
+        game.gameObjs.createNewFood();
         gr.update();
-        gr.render();
+        gr.render(game);
     }
     return 0;
 }

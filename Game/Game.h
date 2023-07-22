@@ -1,10 +1,12 @@
 class Game{
 public:
     GameObjs gameObjs = GameObjs();
-    void createNewFood(){
-        Params params = Params();
-        Food food = Food(random(0, params.Width), random(0, params.Width), random(params.MIN_SAT, params.MAX_SAT));
-        gameObjs.food.push_back(food);
+    Camera camera = Camera(0, 0, 1);
+    Game(){
+        Player player = Player(100, 100);
+        gameObjs.players.push_back(player);
     }
-    Game(){}
+    void update(){
+
+    }
 };

@@ -19,10 +19,15 @@ public:
             }
         }
     }
-    void render(){
+    void render(Game game){
         this->window.clear(sf::Color(150, 150, 150));
 
-        
+        for(int i = 0; i < game.gameObjs.food.size(); i++){
+            sf::CircleShape circle(game.gameObjs.food[i].sat);
+            circle.setPosition(game.gameObjs.food[i].x, game.gameObjs.food[i].y);
+            circle.setFillColor(game.gameObjs.food[i].color);
+            this->window.draw(circle);
+        }
 
         this->window.display();
     }
