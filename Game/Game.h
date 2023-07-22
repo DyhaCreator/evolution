@@ -10,9 +10,9 @@ public:
     void update(float Mx, float My){
         Params params = Params();
         for(int i = 0; i < gameObjs.players.size(); i++){
-            gameObjs.players[i].move(Mx - params.Width / 2 + gameObjs.players[i].mass, My - params.Height / 2 + gameObjs.players[i].mass);
+            gameObjs.players[i].move(Mx - params.Width / 2, My - params.Height / 2);
         }
-        camera.x = gameObjs.players[0].x - params.Width / 2 + gameObjs.players[0].mass;
-        camera.y = gameObjs.players[0].y - params.Height / 2 + gameObjs.players[0].mass;
+        camera.x = gameObjs.players[0].x - params.Width / 2;
+        camera.y = gameObjs.players[0].y - params.Height / 2;
     }
 };
