@@ -12,7 +12,7 @@ public:
     void move(float x, float y){
         Params params = Params();
         float max_speed = 10;
-        float acceleration = 0.1;
+        float acceleration = 0.025;
         float r = acos(x / sqrt(x * x + y * y));
         if(y < 0)r = M_PI * 2 - r;
         speedX += cos(r) * acceleration;
