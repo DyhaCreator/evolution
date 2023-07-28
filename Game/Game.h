@@ -10,7 +10,7 @@ public:
     void update(float Mx, float My){
         Params params = Params();
         for(int i = 0; i < gameObjs.players.size(); i++){
-            gameObjs.players[i].move(Mx - params.Width / 2, My - params.Height / 2);
+            gameObjs.players[i].move(Mx + camera.x - gameObjs.players[i].x, My + camera.y - gameObjs.players[i].y);
         }
         camera.follow(gameObjs.players[0].x,
                       gameObjs.players[0].y);
